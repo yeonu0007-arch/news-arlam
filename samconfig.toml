@@ -49,3 +49,4 @@ image_repositories = [
     "ScraperLambdaFunction=339712918956.dkr.ecr.ap-northeast-2.amazonaws.com/ai-news-agent/scraper-lambda-dev"
 ]
 
+ 
