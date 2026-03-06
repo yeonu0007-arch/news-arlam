@@ -46,7 +46,8 @@ class NewsScraperAgentLogger(logging.Logger):
         self.addHandler(rich_handler)
 
         # FileHandler 추가 (기록용)
-        file_handler = logging.FileHandler("logs.txt", encoding="utf-8")
+        log_file_path = "logs.txt" if env.PROFILE == "local" else "/tmp/logs.txt"
+        file_handler = logging.FileHandler(log_file_path, encoding="utf-8")
         file_handler.setLevel(logging.INFO)
         file_handler.setFormatter(formatter)
         self.addHandler(file_handler)

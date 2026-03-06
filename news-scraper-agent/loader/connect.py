@@ -9,7 +9,7 @@ def connect_db():
     try:
         if env.PROFILE == "prod":
             connect(host=env.MONGO_DB_PROD_URI)
-        elif env.PROFILE == "develop":
+        elif env.PROFILE == "dev":
             connect(host=env.MONGO_DB_DEV_URI)
         else:
             connect(host=env.MONGO_DB_LOCAL_URI)
